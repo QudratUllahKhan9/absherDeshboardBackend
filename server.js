@@ -19,6 +19,15 @@ app.use(cors());
 app.use(express.json({ limit: '2mb' }));
 app.use(express.urlencoded({ extended: true, limit: '2mb' }));
 
+// Root URL check (Vercel pe 404 na aaye)
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'API chal raha hai',
+    db: mongoose.connection.readyState === 1 ? 'connected' : 'not connected',
+  });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({
     success: true,
