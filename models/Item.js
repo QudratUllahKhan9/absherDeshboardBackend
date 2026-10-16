@@ -41,6 +41,46 @@ const itemSchema = new mongoose.Schema(
       type: String,
       default: '',
     },
+
+    // Iqama Image (naya)
+    iqamaImageUrl: {
+      type: String,
+      default: '',
+    },
+    iqamaImagePublicId: {
+      type: String,
+      default: '',
+    },
+
+    // QR Code 1 (naya)
+    qrCode1Url: {
+      type: String,
+      default: '',
+    },
+    qrCode1PublicId: {
+      type: String,
+      default: '',
+    },
+
+    // Driving License Image (naya)
+    drivingLicenseImageUrl: {
+      type: String,
+      default: '',
+    },
+    drivingLicenseImagePublicId: {
+      type: String,
+      default: '',
+    },
+
+    // QR Code 2 (naya)
+    qrCode2Url: {
+      type: String,
+      default: '',
+    },
+    qrCode2PublicId: {
+      type: String,
+      default: '',
+    },
   },
   {
     timestamps: true,
